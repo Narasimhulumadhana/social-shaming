@@ -1,0 +1,14 @@
+<div class="row padding5">
+  <div class="col-sm-8">
+    <table class="table table-responsive table-striped">
+      <tr><td>FullName:</td><td><strong> {{user.firstName +' '+ user.lastName}}</strong></td></tr>
+      <tr><td>Social Score</td><td><strong> {{user.socialScore}}/5</strong></td></tr>
+      <tr><td>Email</td><td><strong> {{user.email}}</strong></td></tr>
+      <tr><td>Gender</td><td><strong> {{user.gender}}</strong></td></tr>
+      <tr><td>Country</td><td><strong> {{user.country}}</strong></td></tr>
+    </table>
+  </div>
+  <div class="col-sm-4">
+    <app-follow [user]="user"></app-follow>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="body-center"> <div *ngIf="user else signup">
+    <div *ngIf="user.userId>0 else admin">
+    <app-posts [user]="user"></app-posts>
+    <app-random-user [user]="user"></app-random-user>
+    <app-posts-list [user]="user"></app-posts-list>
+    </div>
+  </div>
+  <ng-template #signup>
+    <app-register></app-register>
+  </ng-template>
+  <ng-template #admin>
+    <div class="row">
+      <div class="col-sm-6">
+        <app-abusive-posts></app-abusive-posts>
+      </div>
+      <div class="col-sm-6">
+        <app-abusive-words></app-abusive-words>
+      </div>
+    </div>
+  </ng-template>
+</div>

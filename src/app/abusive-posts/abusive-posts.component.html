@@ -1,0 +1,18 @@
+<div *ngIf="posts && posts.length>0 else noPosts">
+  <div class="card" *ngFor="let post of posts;let i=index">
+      <div class="card-body">
+        <h5 class="card-title">{{post.postedBy.firstName+' '+post.postedBy.lastName}}</h5>
+        <p class="card-text">{{post.post}}</p>
+        <button type="button" (click)="Abusive(post.postId,post.postedBy.userId,i)" class="btn btn-sm btn-outline-info">Delete</button>
+        <button type="button" (click)="NotAbusive(post.postId,i)" class="btn btn-sm btn-outline-info">Not Abusive</button>
+      </div>
+    </div>
+</div>
+<ng-template #noPosts>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Abusive Posts</h5>
+      <p class="card-text">we are in good phase no posts</p>
+    </div>
+  </div>
+</ng-template>

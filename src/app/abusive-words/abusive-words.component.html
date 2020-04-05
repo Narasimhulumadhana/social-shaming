@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="form-group col-sm-8" >
+    <input type="text" [(ngModel)]="word" class="form-control">
+  </div>
+  <div class="col-sm-2">
+    <button (click)="addWord()" class="btn btn-sm btn-primary">add</button>
+  </div>
+</div>
+<ul *ngFor="let word of words">
+  <li><strong>{{word.word}}</strong></li>
+</ul>
+

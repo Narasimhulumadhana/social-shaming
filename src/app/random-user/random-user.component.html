@@ -1,0 +1,11 @@
+<div *ngIf="users && users.length>0">
+  <div class="row padding1">
+    <div *ngFor="let user of users;let i=index" class="card col-sm-4" style="width: 18em">
+      <div class="card-body">
+        <h5 class="card-title">{{user.firstName+' '+user.lastName}}</h5>
+        <p class="card-text"> Rating : {{user.socialScore}}/5</p>
+        <button type="button" (click)="follow(user.userId,i)" class="btn btn-sm btn-outline-info">follow</button>
+      </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<form>
+  <div class="row">
+  <div class="form-group col-sm-8">
+    <textarea class="form-control" (change)="doTextareaValueChange($event)" rows="4" cols="80" id="post"></textarea>
+  </div>
+  <div  style="padding: 2%" class="form-group col-sm-4">
+  <button type="button" (click)="postTweet()" class="btn btn-primary form-inline">tweet</button>
+  </div>
+  </div>
+</form>
